@@ -2,8 +2,8 @@ import sys
 from db.db import Database
 from encryption.encryption import Encryption
 from config.config import dbname, host, port, user, password
-from PySide6 import QtWidgets
-from PySide6.QtWidgets import QApplication, QMainWindow, QTextEdit
+from PyQt5 import QtWidgets
+from PyQt5.QtWidgets import QApplication, QMainWindow, QTextEdit
 import pyperclip
 
 f = Encryption()
@@ -121,8 +121,8 @@ class Window(QMainWindow):
 
         self.name.setText('')
         self.url.setText('')
-        self.login.setText('')
-        self.password.setText('')
+        self.loginAdd.setText('')
+        self.passwordAdd.setText('')
 
         if(db.get_password(name)):
             print('уже существует')
